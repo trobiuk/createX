@@ -1,2 +1,6 @@
-//
+.header{
+  &__container{
+    @include flex-all-sb;
+  }
+}
 
