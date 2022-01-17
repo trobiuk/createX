@@ -7,3 +7,13 @@ const portfolioSlider = new Swiper('.portfolio-section__items', {
     prevEl: '.portfolio-section__prev',  
   },
 });
+
+const testimonialsSlider = new Swiper('.testimonials__items', {
+  slidesPerView: 1,
+  spaceBetween: gap, 
+  loop: true,   
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',  
+  },
+});
