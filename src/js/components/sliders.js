@@ -1,4 +1,5 @@
 const portfolioSlider = new Swiper('.portfolio-section__items', {
+  watchSlidesProgress: true,
   slidesPerView: 3,
   spaceBetween: gap,    
   navigation: {
