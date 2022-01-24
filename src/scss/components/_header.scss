@@ -1,17 +1,22 @@
-.header{
+.header {
   padding: 23px 0 21px;
 
-  &__container{
+  &__container {
     @include flex-all-sb;
   }
 
-  &__nav{
+  &__nav {
     margin-left: -112px;
   }
 
-  &--main{
+  &--main {
     background-color: var(--color-light);
   }
+
+  &--secondary {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
-
-
