@@ -1,12 +1,13 @@
-.mission {  
+.mission {
   background-color: var(--color-light);
 
   &__list {
     --mission-gap: 94px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
-    gap: calc(var(--mission-gap) * 2);    
+    gap: calc(var(--mission-gap) * 2);
   }
 
   &__item {
@@ -25,7 +26,7 @@
         top: 0;
         width: 1px;
         height: 100%;
-        background-image: url(../img/divider.svg);
+        background-image: url("../img/divider.svg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -73,14 +74,14 @@
     0 4px 4px -4px rgba(30, 33, 44, 0.03);
   background-color: var(--color-light);
 
-  &__title{
+  &__title {
     margin: 0;
     margin-bottom: 33px;
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
     text-align: center;
-    color: var(--color-ebony);    
+    color: var(--color-ebony);
   }
 
   &__content {
