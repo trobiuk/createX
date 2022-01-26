@@ -8,6 +8,16 @@ const portfolioSlider = new Swiper('.portfolio-section__items', {
   },
 });
 
+const relatedSlider = new Swiper('.related-projects__items', {
+  watchSlidesProgress: true,
+  slidesPerView: 3,
+  spaceBetween: gap,    
+  navigation: {
+    nextEl: '.related-projects__next',
+    prevEl: '.related-projects__prev',  
+  },
+});
+
 const testimonialsSlider = new Swiper('.testimonials__items', {
   slidesPerView: 1,
   spaceBetween: gap, 
