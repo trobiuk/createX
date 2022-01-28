@@ -19,6 +19,7 @@ const relatedSlider = new Swiper('.related-projects__items', {
 });
 
 const testimonialsSlider = new Swiper('.testimonials__items', {
+  watchSlidesProgress: true,
   slidesPerView: 1,
   spaceBetween: gap, 
   loop: true,   
