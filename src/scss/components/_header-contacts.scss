@@ -1,39 +1,40 @@
-.header-contacts{
+.header-contacts {
   @include flex-v-center;
-  &__link{
+
+  &__link {
     @include flex-column-start;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 35px;
     }
-  }  
+  }
 }
 
-.contacts-link{
+.contacts-link {
   padding-left: 53px;
   background-position: left center;
   background-size: 40px 40px;
   background-repeat: no-repeat;
 
-  &__caption{
+  &__caption {
     font-weight: 700;
     font-size: 14px;
     line-height: 150%;
-    color: var(--color-grey);
+    color: var(--color-gray);
   }
 
-  &__value{
+  &__value {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     color: var(--color-ebony);
   }
 
-  &--call{
+  &--call {
     background-image: url("../img/phone.svg");
   }
 
-  &--mail{
+  &--mail {
     background-image: url("../img/mail.svg");
   }
 }
