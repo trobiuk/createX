@@ -1,5 +1,5 @@
 .partners {
-  padding: 80px;
+  padding: 80px 0;
   background-color: var(--color-athens);
 
   &__title {
@@ -9,6 +9,15 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 102px;
+    gap: 40px 102px;
+  }
+
+  &--about {
+    padding: 120px 0;
+    background-color: var(--color-light);
+
+    .partners__title {
+      margin-bottom: 25px;
+    }
   }
 }
