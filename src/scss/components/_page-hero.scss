@@ -72,6 +72,7 @@
     .article-meta__item:not(:last-child)::after {
       right: -14px;
       height: 16px;
+      background-color: var(--color-storm);
     }
 
     .article-meta__item:not(:last-child) {
