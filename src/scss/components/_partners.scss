@@ -12,6 +12,13 @@
     gap: 40px 102px;
   }
 
+  &__link {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+
   &--about {
     padding: 120px 0;
     background-color: var(--color-light);

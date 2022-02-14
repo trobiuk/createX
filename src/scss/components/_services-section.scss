@@ -83,10 +83,9 @@
     transition: color 0.3s ease-in-out;
   }
 
-  &--construct {
-    &::before {
-      background-image: url("../img/services-1.jpg");
-    }
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
   }
 
   &:hover {
@@ -104,6 +103,12 @@
 
     .services-item__title {
       color: var(--color-light);
+    }
+  }
+
+  &--construct {
+    &::before {
+      background-image: url("../img/services-1.jpg");
     }
   }
 }

@@ -56,12 +56,6 @@
     }
   }
 
-  &__fields {
-    border: 0;
-    padding: 0;
-    width: 47.5%;
-  }
-
   .form-field__caption {
     margin-bottom: 10px;
     font-size: 16px;
@@ -92,61 +86,67 @@
       margin-right: 22px;
     }
   }
-}
 
-.choices {
-  width: 100%;
-}
+  .choices {
+    width: 100%;
+  }
 
-.choices__inner {
-  margin: 0;
-  border: 1px solid #d7dadd;
-  border-radius: 4px;
-  padding: 0;
-  height: 52px;
-  background-color: var(--color-athens);
-}
+  .is-focused {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
 
-.choices__list--single .choices__placeholder {
-  font-size: 16px;
-  line-height: 160%;
-  color: #9a9ca5;
-  opacity: 1;
-}
+  .choices__inner {
+    margin: 0;
+    border: 1px solid #d7dadd;
+    border-radius: 4px;
+    padding: 0;
+    height: 52px;
+    background-color: var(--color-athens);
+  }
 
-.choices[data-type*="select-one"] .choices__inner {
-  padding-bottom: 0;
-}
+  .choices__list--single .choices__placeholder {
+    font-size: 16px;
+    line-height: 160%;
+    color: #9a9ca5;
+    opacity: 1;
+  }
 
-.choices__list--single {
-  display: flex;
-  align-items: center;
-  padding-left: 15px;
-  height: 100%;
-}
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
 
-.choices__list--dropdown .choices__item--selectable::after {
-  display: none;
-}
+  .choices__list--single {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 100%;
+  }
 
-.choices[data-type*="select-one"]::after {
-  right: 19px;
-  margin-right: 0;
-  border: none;
-  width: 14px;
-  height: 7px;
-  background: center / cover url("../img/angle-down.svg") no-repeat;
-  transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
-}
+  .choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+  }
 
-.choices[data-type*="select-one"].is-open::after {
-  margin-top: -7px;
-  transform: rotate(180deg) translateY(-50%);
-}
+  .choices[data-type*="select-one"]::after {
+    right: 19px;
+    margin-top: 0;
+    margin-right: 0;
+    border: none;
+    width: 14px;
+    height: 7px;
+    background: center / cover url("../img/angle-down.svg") no-repeat;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
 
-.choices__list--dropdown {
-  background-color: var(--color-athens);
+  .choices[data-type*="select-one"].is-open::after {
+    margin-top: 0;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .choices__list--dropdown {
+    background-color: var(--color-athens);
+  }
 }
 
 .form-contacts .form-field__input--big {

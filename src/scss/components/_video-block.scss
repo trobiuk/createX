@@ -1,10 +1,10 @@
-.video-block {  
+.video-block {
   position: relative;
-  overflow: hidden;  
+  overflow: hidden;
   border-radius: 4px;
   height: 500px;
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -22,8 +22,9 @@
     object-fit: cover;
   }
 
-  &__play{
+  &__play {
     @include flex-all-center;
+
     position: absolute;
     left: 50%;
     top: 50%;
@@ -33,15 +34,30 @@
     height: 80px;
     background-color: var(--color-primary);
     transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease-in-out;
 
-    svg{
+    svg {
       width: 26px;
       height: 26px;
     }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: var(--color-active);
+    }
+
+    &:active {
+      background-color: var(--color-active);
+    }
   }
 
-  &__muted{
+  &__muted {
     @include flex-all-center;
+
     position: absolute;
     left: 32px;
     bottom: 32px;
@@ -50,10 +66,24 @@
     width: 40px;
     height: 40px;
     background-color: rgba(#fff, 0.12);
+    transition: background-color 0.3s ease-in-out;
 
-    svg{
+    svg {
       width: 20px;
       height: 20px;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: rgba(#fff, 0.4);
+    }
+
+    &:active {
+      background-color: rgba(#fff, 0.4);
     }
   }
 }
