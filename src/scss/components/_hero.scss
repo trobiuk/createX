@@ -39,10 +39,6 @@
       background-color: transparent;
       opacity: 1;
 
-      &:not(:last-child) {
-        margin-right: 4px !important;
-      }
-
       &::before {
         counter-increment: pag;
         content: "0" counter(pag);
@@ -56,6 +52,10 @@
 
       &::after {
         display: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4px !important;
       }
     }
   }

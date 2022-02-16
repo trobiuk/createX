@@ -3,12 +3,41 @@
 
   &__list {
     column-gap: var(--grid-gap);
-    margin-bottom: 20px;
-    row-gap: 0;
+    margin-bottom: 80px;
+    row-gap: 64px;
+  }
+
+  &__top {
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 0;
+  }
+
+  &__socials {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 4px 4px;
+    padding: 20px 10px;
+    width: 100%;
+    background-color: rgba(#ff5a30, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
   &__item {
     grid-column: 3 span;
+
+    &:hover {
+      .team__socials {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &__text {
@@ -49,10 +78,10 @@
       fill: var(--color-light);
       object-fit: cover;
     }
-  }
 
-  &__image {
-    margin-bottom: 12px;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
   }
 
   &__name {
