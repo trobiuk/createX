@@ -86,6 +86,16 @@ a {
   &--home {
     color: var(--color-light);
   }
+
+  @include minitablet {
+    font-size: 60px;
+    line-height: 75px;
+  }
+
+  @include mobile {
+    font-size: 35px;
+    line-height: 45px;
+  }
 }
 
 .main-descr {
@@ -97,6 +107,11 @@ a {
   &--home {
     margin-bottom: 60px;
     color: var(--color-light);
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -171,6 +186,11 @@ a {
   &--center {
     text-align: center;
   }
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .descr {
@@ -183,10 +203,24 @@ a {
   &--center {
     text-align: center;
   }
+
+  @include mobile {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .section-offset {
   padding-top: 120px;
+
+  @include minitablet {
+    padding-top: 60px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
 }
 
 .custom-checkbox {
@@ -291,7 +325,7 @@ a {
     position: absolute;
     left: -1px;
     top: 4px;
-    display: inline-block;    
+    display: inline-block;
     border: 1px solid #b3b7bc;
     border-radius: 100%;
     width: 16px;
@@ -312,7 +346,7 @@ a {
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }  
+  }
 
   &__input:checked + &__text::before {
     border-color: var(--color-primary);
@@ -331,6 +365,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .to-top {
@@ -372,11 +410,16 @@ a {
     &:hover {
       background-color: var(--color-active);
     }
-  }  
+  }
 
   &--active {
     opacity: 1;
     visibility: visible;
+  }
+
+  @include middledesk {
+    right: 20px;
+    bottom: 20px;
   }
 }
 
@@ -437,7 +480,7 @@ a {
     opacity: 1;
   }
 
-  .choices[data-type*=select-one] .choices__inner {
+  .choices[data-type*="select-one"] .choices__inner {
     padding-bottom: 0;
   }
 
@@ -448,7 +491,7 @@ a {
     height: 100%;
   }
 
-  .choices[data-type*=select-one]:after {
+  .choices[data-type*="select-one"]:after {
     right: 19px;
     margin-top: 0;
     border: none;
@@ -462,7 +505,7 @@ a {
     transition: transform 0.3s ease-in-out;
   }
 
-  .choices[data-type*=select-one].is-open:after {
+  .choices[data-type*="select-one"].is-open:after {
     margin-top: -7px;
     transform: rotate(180deg) translateY(-50%);
   }
@@ -474,4 +517,79 @@ a {
   .choices__list--dropdown {
     background-color: var(--color-athens);
   }
+}
+
+.burger {
+  --burger-width: 40px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+
+  position: absolute;
+  display: none;
+  right: 15px;
+  top: 23px;
+  z-index: 1000;
+  display: none;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - var(--burger-line-height));
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger:focus::after {
+  opacity: 1;
 }
