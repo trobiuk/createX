@@ -1,7 +1,7 @@
 .services {
   position: relative;
   overflow: hidden;
-  padding: 120px;
+  padding-top: 120px;
   padding-bottom: 180px;
   background-color: var(--color-light);
 
@@ -35,6 +35,10 @@
       .services__info {
         order: -1;
         padding-left: 0;
+
+        @include mobile {
+          order: initial;
+        }
       }
 
       .services__image {
