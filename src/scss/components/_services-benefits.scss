@@ -9,6 +9,10 @@
   &__btn {
     width: 390px;
     transform: translateY(13px);
+
+    @include mobile {
+      width: 290px;
+    }
   }
 
   &__centered {
@@ -27,6 +31,18 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
     gap: calc(var(--mission-gap) * 2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -49,6 +65,10 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
 

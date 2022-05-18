@@ -7,10 +7,19 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 48px;
+
+    @include mobile {
+      display: block;
+      margin-bottom: 25px;
+    }
   }
 
   &__slider-nav {
     transform: translateX(12px);
+
+    @include mobile {
+      transform: none;
+    }
   }
 
   &__title {
@@ -26,5 +35,9 @@
   &__items {
     margin: -100px;
     padding: 100px;
+
+    .portfolio-item__title {
+      min-height: 52px;
+    }
   }
 }

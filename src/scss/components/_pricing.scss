@@ -23,6 +23,10 @@
   border-radius: 4px;
   width: 100%;
   box-shadow: var(--main-shadow);
+
+  @include minitablet {
+    overflow-x: auto;
+  }
 }
 
 .table {
@@ -100,6 +104,10 @@
         outline: 2px solid var(--color-primary);
         outline-offset: 2px;
       }
+
+      @include tablet {
+        padding: 0 10px;
+      }
     }
 
     &:first-child {
@@ -125,5 +133,9 @@
     line-height: 160%;
     text-align: center;
     color: var(--color-gray);
+  }
+
+  @include minitablet {
+    width: 1200px;
   }
 }

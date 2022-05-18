@@ -18,12 +18,20 @@ const portfolioSlider = new Swiper(".portfolio-section__items", {
 
 const relatedSlider = new Swiper(".related-projects__items", {
   watchSlidesProgress: true,
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: gap,
   navigation: {
     nextEl: ".related-projects__next",
     prevEl: ".related-projects__prev",
   },
+  breakpoints: {
+    576: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  }
 });
 
 const testimonialsSlider = new Swiper(".testimonials__items", {
